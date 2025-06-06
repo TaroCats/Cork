@@ -171,10 +171,7 @@ struct Licensing_NotBoughtOrActivatedView: View
                         }
                         else
                         {
-                            withAnimation
-                            {
-                                hasCheckingFailed = true
-                            }
+                            appState.licensingState = .bought
                         }
                     }
                     catch let licenseCheckingError as CorkLicenseRetrievalError
